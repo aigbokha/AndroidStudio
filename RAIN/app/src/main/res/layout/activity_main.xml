@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tabContactList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Large Text"
+                            android:id="@+id/textView"
+                            android:layout_marginTop="10dp" />
+
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/listView" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabCreateInfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:focusable="false"
+                        android:filterTouchesWhenObscured="false">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/imgViewContactImage"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/contacts" />
+
+                        <ScrollView
+                            android:id="@+id/scrollView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" >
+
+                                <EditText
+                                    android:id="@+id/txtName"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dip"
+                                    android:layout_marginBottom="200dp"
+                                    android:hint="FullName" />
+
+                                <EditText
+                                    android:id="@+id/txtEmail"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dip"
+                                    android:layout_marginBottom="200dp"
+                                    android:hint="Email" />
+
+                                <EditText
+                                    android:id="@+id/txtPhone"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dip"
+                                    android:layout_marginBottom="200dp"
+                                    android:hint="Phone" />
+
+                                <EditText
+                                    android:id="@+id/txtAddress"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dip"
+                                    android:layout_marginBottom="200dp"
+                                    android:hint="Address" />
+
+                                <requestFocus
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" >
+                                </EditText>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.40"
+                                    android:orientation="vertical" >
+
+                                    <RadioButton
+                                        android:id="@+id/radioWhatsapp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Whatsapp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioGmail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="1dp"
+                                        android:text="Gmail" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioFacebook"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Facebook" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioInstagram"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Instagram" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.17"
+                                    android:orientation="vertical" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkVIP"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="VIP" />
+
+                                    <CheckBox
+                                        android:id="@+id/checkContacts"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Contacts"
+                                        android:enabled="false" />
+
+                                    <Button
+                                        android:id="@+id/buttonBack"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Back" />
+
+                                    <Button
+                                        android:id="@+id/buttonSend"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Send"
+                                        android:enabled="false" />
+
+                                    <Button
+                                        android:id="@+id/buttonNext"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Next"
+                                        android:onClick="screenOne"/>
+
+                                    <Button
+                                        android:id="@+id/buttonMoreInfo"
+                                        android:layout_width="180dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="More Info"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+</RelativeLayout>

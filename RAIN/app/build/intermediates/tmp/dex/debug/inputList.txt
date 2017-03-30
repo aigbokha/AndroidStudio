@@ -1,0 +1,2 @@
+/Users/macuser/AndroidStudioProjects/MyApplication/app/build/intermediates/classes/debug
+/Users/macuser/AndroidStudioProjects/MyApplication/app/build/intermediates/pre-dexed/debug/android-support-v4-214b7cf52686320b48d02c90ab9f572ea7208cdf.jar
